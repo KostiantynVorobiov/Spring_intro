@@ -18,4 +18,5 @@ public class Main {
         logger.info("Show all users");
         userService.listUsers().forEach(System.out::println);
     }
+
 }
