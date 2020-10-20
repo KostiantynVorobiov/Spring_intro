@@ -19,6 +19,9 @@ public class Main {
         userService.add(new User("Afonya", "Dudkin", "Dudka@bt.ht"));
 
         logger.info("Show all users");
-        userService.listUsers().forEach(logger::info);
+ //       userService.listUsers().forEach(logger::info);
+        for (User user: userService.listUsers()) {
+            logger.info(user);
+        }
     }
 }
