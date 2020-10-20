@@ -50,7 +50,8 @@ public class UserDaoImpl implements UserDao {
     public Optional<User> findById(Long id) {
         logger.info("Trying to find user by id: " + id + " from DB");
         try (Session session = sessionFactory.openSession()) {
-            Query<User> findByIdUserQuery = session.createQuery("FROM User WHERE id = :id", User.class);
+            Query<User> findByIdUserQuery = session.createQuery("FROM User WHERE id = :id",
+                    User.class);
             findByIdUserQuery.setParameter("id", id);
             return findByIdUserQuery.uniqueResultOptional();
         } catch (Exception e) {
