@@ -38,7 +38,7 @@ public class UserController {
         return convertUserToUserDto(user);
     }
 
-    @GetMapping("/users")
+    @GetMapping
     public List<UserResponseDto> getAllUsers() {
         logger.info("Trying to get all users from DB in UserController");
         return userService.listUsers().stream()
