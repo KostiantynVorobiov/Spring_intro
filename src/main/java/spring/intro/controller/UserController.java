@@ -16,7 +16,7 @@ import spring.intro.service.UserService;
 @RequestMapping("/user")
 public class UserController {
     private static final Logger logger = Logger.getLogger(UserController.class);
-    private UserService userService;
+    private final UserService userService;
 
     @Autowired
     public UserController(UserService userService) {
