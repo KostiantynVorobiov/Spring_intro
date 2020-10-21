@@ -18,6 +18,8 @@ public class Main {
         userService.add(new User("Yosup", "Ivanov", "Ivan@bt.ht"));
         userService.add(new User("Afonya", "Dudkin", "Dudka@bt.ht"));
 
+        logger.info("User what I get by Id " + userService.getById(2L));
+
         logger.info("Show all users");
         userService.listUsers().forEach(logger::info);
     }
